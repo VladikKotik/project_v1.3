@@ -1,0 +1,28 @@
+﻿@model project_v1.Models.Car
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+
+        @Html.DropDownListFor(x => x.model, new[] {
+            new SelectListItem() {
+                Text = "corolla", Value = "corolla"
+            }, new SelectListItem() {
+                Text = "camry", Value = "camry" }
+        }, "Choose an option")
+             <input type="submit" value="Submit" />
+        }
+    </div>
+</body>
+</html>

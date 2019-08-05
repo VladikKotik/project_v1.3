@@ -1,0 +1,25 @@
+﻿@using project_v1.Models
+@model  IEnumerable<project_v1.Models.ICar>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    conf <p>
+    <div>
+        @foreach (project_v1.Models.otherCar b in Model) {
+        <p> @b.getManufacturer()  @b.getModel() </p>
+         
+            
+        }
+
+    </div>
+</body>
+</html>

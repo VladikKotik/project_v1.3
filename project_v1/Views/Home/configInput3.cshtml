@@ -1,0 +1,47 @@
+﻿@using project_v1.Models
+@model CarsContext
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            @foreach (project_v1.Models.otherCar b in Model.otherCars.ToList())
+            {
+            <tr>
+                <td> @b.getManufacturer()</td>
+                <td>  @b.getModel()</td>
+                <td>
+                    @Html.ActionLink(linkText: "del", actionName: "delete", controllerName: "Home", routeValues: new { lid = b.id }, htmlAttributes: null)
+
+
+                </td>
+                <td>
+                    @Html.ActionLink(linkText: "edit", actionName: "update", controllerName: "Home", routeValues: new { lid = b.id }, htmlAttributes: null)
+
+
+                </td>
+            </tr>
+
+
+            }
+        </table>
+
+
+    </div>
+    <!-- ее над выпилить(бегинформ), это только для пост  -->
+    <div>
+        @Html.ActionLink(linkText: "add", actionName: "update", controllerName: "Home", routeValues: new { lid = 0 }, htmlAttributes: null)
+
+    </div>
+</body>
+</html>

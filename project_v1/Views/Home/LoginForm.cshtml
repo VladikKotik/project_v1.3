@@ -1,0 +1,26 @@
+﻿@model project_v1.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm())
+    {
+        <p>Your name: @Html.TextBoxFor(x => x.Login) </p>
+        <p>Your password: @Html.TextBoxFor(x => x.Password) </p>
+        <input type="submit" value="Submit submit submit" />
+}
+
+    </div>
+</body>
+</html>

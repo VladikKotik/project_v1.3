@@ -1,0 +1,29 @@
+﻿@using project_v1.Models
+@model otherCar
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>  car id: @Model.id</p>
+            
+            <p> Manufacturer: @Html.TextBoxFor(x => x.manufacturer) </p>
+            <p> Model: @Html.TextBoxFor(x => x.model) </p> 
+            <p style="display: none">repeat id pls: @Html.TextBoxFor(x => x.id)</p>
+            <input type="submit" value="submit submit submit" />
+        }
+
+    </div>
+</body>
+</html>
